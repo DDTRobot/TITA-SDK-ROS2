@@ -1,0 +1,4 @@
+/**:
+  user_command_node:
+    ros__parameters:
+      pub_freq: 160.0
