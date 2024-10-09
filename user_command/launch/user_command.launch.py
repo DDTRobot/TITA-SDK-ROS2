@@ -25,16 +25,16 @@ from launch_utils import tita_namespace
 
 def generate_launch_description():
     config = os.path.join(
-        get_package_share_directory('hc_command'),
+        get_package_share_directory('user_command'),
         'config',
         'param.yaml'
     )
 
     return LaunchDescription([
         Node(
-            package='hc_command',
-            executable='hc_command_node',
-            name='hc_command_node',
+            package='user_command',
+            executable='user_command_node',
+            name='user_command_node',
             namespace=tita_namespace,
             output='screen',
             parameters=[config]

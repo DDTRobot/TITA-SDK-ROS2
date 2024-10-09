@@ -21,6 +21,7 @@ ament_auto_add_executable(${PROJECT_NAME}_node
 )
 
 install(DIRECTORY launch DESTINATION share/${PROJECT_NAME})
+install(DIRECTORY config DESTINATION share/${PROJECT_NAME})
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)

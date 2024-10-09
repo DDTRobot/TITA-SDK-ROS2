@@ -1,3 +1,4 @@
-sdk_command_node:
-  ros__parameters:
-    value1: 1.0
+/**:
+  user_command_node:
+    ros__parameters:
+      pub_freq: 160.0

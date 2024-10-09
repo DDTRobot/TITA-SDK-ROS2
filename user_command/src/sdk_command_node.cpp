@@ -22,7 +22,6 @@ SDKCmdNode::SDKCmdNode(const rclcpp::NodeOptions & options) : Node("user_command
   user_sdk_publisher_ = this->create_publisher<tita_locomotion_interfaces::msg::LocomotionCmd>(
     tita_topic::user_command, 10);
 
-  user_msg_ = std::make_shared<tita_locomotion_interfaces::msg::LocomotionCmd>();
   auto period = std::chrono::duration<double>(1.0 / pub_freq_);
   timer_ = this->create_wall_timer(period, std::bind(&SDKCmdNode::timerCallback, this));
 }
@@ -32,7 +31,7 @@ void SDKCmdNode::timerCallback()
   auto unique_joy_msg = std::make_unique<tita_locomotion_interfaces::msg::LocomotionCmd>();
   unique_joy_msg->header.stamp = this->now();
   unique_joy_msg->header.frame_id = "cmd";
-  
+
   unique_joy_msg->twist.angular.z = 0.05;
   unique_joy_msg->pose.position.z = 0.2;
   unique_joy_msg->pose.orientation.w = 1.0;
