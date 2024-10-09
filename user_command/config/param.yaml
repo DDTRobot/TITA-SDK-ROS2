@@ -1,0 +1,3 @@
+sdk_command_node:
+  ros__parameters:
+    value1: 1.0
