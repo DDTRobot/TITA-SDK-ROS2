@@ -1,0 +1,3 @@
+diagnostic_msgs/DiagnosticArray power_self_test
+---
+bool success

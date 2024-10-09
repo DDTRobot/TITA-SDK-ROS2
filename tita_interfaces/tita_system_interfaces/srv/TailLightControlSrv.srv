@@ -1,0 +1,29 @@
+# This is tita robot Tail light control service, 
+# You can control a total of 36 tail rgb light
+
+# A total of 36 lights can be controlled, 
+# and the light efficiency of each light is represented
+# by the data structure uint32_t, so you need to use a 
+# uint32_t array containing 36 elements
+
+# If you want to control the headlights, set the bool 
+# is_control to true, when you give up control, you need 
+# to set the bool to false, after which the light effect 
+# will be automatically taken over by the software's 
+# internal state machine
+
+# rgbl values refer to red, green, 
+# blue and brightness 
+# for example: light_rgbl_value[0] = 0x12345678
+# This means that red is: (0x12U), green is: (0x34U),
+# blue is: (0x56U), brightness is: (0x78U)
+
+# Each time you write data, you must complete the 36 
+# light effects, because the underlying software will 
+# directly update the light effects of 36 light beads 
+# at one time
+
+bool is_control
+uint32[36] light_rgbl_value
+---
+bool success
