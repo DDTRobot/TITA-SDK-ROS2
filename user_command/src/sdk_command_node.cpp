@@ -32,7 +32,7 @@ void SDKCmdNode::timerCallback()
   unique_joy_msg->header.stamp = this->now();
   unique_joy_msg->header.frame_id = "cmd";
 
-  unique_joy_msg->twist.angular.z = 0.05;
+  unique_joy_msg->twist.angular.z = 0.5;
   unique_joy_msg->pose.position.z = 0.2;
   unique_joy_msg->pose.orientation.w = 1.0;
 
