@@ -1,6 +1,7 @@
 # Command manager send msg to locomotion unit.
 std_msgs/Header header
-# "stand" "jump" "die"
+
+# "idle" "stop" "charge" "jump" "balance" "transform_down" "transform_up"
 string fsm_mode 
 
 # Robot body pose

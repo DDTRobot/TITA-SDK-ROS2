@@ -38,7 +38,7 @@ void SDKCmdNode::timerCallback()
 
   unique_joy_msg->twist.angular.z = 0.5;
   unique_joy_msg->pose.position.z = 0.2;
-
+  unique_joy_msg->fsm_mode = "transform_up"; // "idle" "stop" "charge" "jump" "balance" "transform_down" "transform_up"
   unique_joy_msg->pose.orientation.x = body_pose.x;
   unique_joy_msg->pose.orientation.y = body_pose.y;
   unique_joy_msg->pose.orientation.z = body_pose.z;
