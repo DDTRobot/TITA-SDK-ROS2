@@ -20,6 +20,7 @@
 
 #include "rclcpp/rclcpp.hpp"
 #include "tita_locomotion_interfaces/msg/locomotion_cmd.hpp"
+#include "tita_utils/tita_utils.hpp"
 #include "tita_utils/topic_names.hpp"
 
 class SDKCmdNode : public rclcpp::Node
@@ -28,7 +29,7 @@ public:
   explicit SDKCmdNode(const rclcpp::NodeOptions & options);
 
 private:
-  /// \brief  Numble A receive callback.
+
   void timerCallback();
 
   rclcpp::Publisher<tita_locomotion_interfaces::msg::LocomotionCmd>::SharedPtr user_sdk_publisher_;

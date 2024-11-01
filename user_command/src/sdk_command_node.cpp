@@ -32,9 +32,17 @@ void SDKCmdNode::timerCallback()
   unique_joy_msg->header.stamp = this->now();
   unique_joy_msg->header.frame_id = "cmd";
 
+  auto pitch_cmd = tita_utils::pitchToQuaternion(1.0);
+  auto roll_cmd = tita_utils::pitchToQuaternion(1.0);
+  auto body_pose = tita_utils::multiplyQuaternions(pitch_cmd, roll_cmd);
+
   unique_joy_msg->twist.angular.z = 0.5;
   unique_joy_msg->pose.position.z = 0.2;
-  unique_joy_msg->pose.orientation.w = 1.0;
+
+  unique_joy_msg->pose.orientation.x = body_pose.x;
+  unique_joy_msg->pose.orientation.y = body_pose.y;
+  unique_joy_msg->pose.orientation.z = body_pose.z;
+  unique_joy_msg->pose.orientation.w = body_pose.w;
 
   user_sdk_publisher_->publish(std::move(unique_joy_msg));
 }
