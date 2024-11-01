@@ -14,6 +14,10 @@ ament_auto_find_build_dependencies()
 
 include_directories(include)
 
+ament_auto_add_library(${PROJECT_NAME}_lib SHARED
+    src/tita_utils.cpp
+)
+
 install(DIRECTORY launch DESTINATION share/${PROJECT_NAME})
 
 if(BUILD_TESTING)
