@@ -33,7 +33,7 @@ void SDKCmdNode::timerCallback()
   unique_joy_msg->header.frame_id = "cmd";
 
   auto pitch_cmd = tita_utils::pitchToQuaternion(1.0);
-  auto roll_cmd = tita_utils::pitchToQuaternion(1.0);
+  auto roll_cmd = tita_utils::rollToQuaternion(1.0);
   auto body_pose = tita_utils::multiplyQuaternions(pitch_cmd, roll_cmd);
 
   unique_joy_msg->twist.angular.z = 0.5;
