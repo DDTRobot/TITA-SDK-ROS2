@@ -50,7 +50,9 @@ ros2 launch tita_bringup sdk_launch.py
 
 * Press the small buttons on the right side of the small screen on the remote control, press it in the middle, appear, the "mode select" interface
 ![/tita_select_mode](./docs/img/1280X1280_1.PNG)
+
 * In the use button to push down, select the USE-SDK Mode Press, the robot will be automatically executed, and the use-SDK will take over the control permissions.
+
 ![/tita_select_mode](./docs/img/1280X1280%20_2.PNG)
 
 ## FAQ
