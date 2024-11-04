@@ -50,7 +50,9 @@ ros2 launch tita_bringup sdk_launch.py
 * 按一下遥控器小屏幕右侧的小按钮，按到中间，出现“mode select”界面
 
 ![/tita_select_mode](../img/1280X1280_1.PNG)
+
 * 使用按钮往下推，选中use-sdk mode 按下，机器人将自动执行，由use-sdk 接管控制权限，此时用遥控器无法做控制
+
 ![/tita_select_mode](../img/1280X1280%20_2.PNG)
 
 ## FAQ
