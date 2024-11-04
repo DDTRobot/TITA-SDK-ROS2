@@ -41,9 +41,9 @@ ros2 launch tita_bringup sdk_launch.py
 |  `sdk_max_speed`  |      `3.0`      |  `3.0`  |              Speed limit，3.0 m/s                  |
 | `turn_max_speed`  |      `6.0`      |  `6.0`  |              Rotation speed limit，6.0 rad/s                  |
 |  `pub_freq`       |  [100.0,170.0]  |  `170`  | Release frequency, unit Hz, range [100.0,170.0]                  |    
-| `height_max` | [0.0,0.3]     |  `0.3`  |  Corresponding to the highest height of the remote control, the distance between the wheel axle and the center of the vehicle body 0.3 m                              |
-| `height_min`     |  [0.0,0.3]          |  `0.2`  |    Corresponding to the middle height shielding position of the remote control, the distance between the wheel axle and the center of the vehicle body 0.2m                         |
-| `height_min` |   [0.0,0.3]   |  `0.1`  |    Corresponding to the remote control's lowest height blocking position, the distance between the wheel axle and the center of the vehicle body 0.1 m                     |
+| `height_max` | [0.0,0.3]     |  `0.3`  |  Corresponding to the highest height position of the remote control, the distance between the wheel axle and the center of the vehicle body is 0.3 m                              |
+| `height_min`     |  [0.0,0.3]          |  `0.2`  |   Corresponding to the middle height position of the remote control, the distance between the wheel axle and the center of the vehicle body is 0.2m                         |
+| `height_min` |   [0.0,0.3]   |  `0.1`  |    Corresponding to the lowest height position of the remote control, the distance between the wheel axle and the center of the vehicle body is 0.1 m                    |
 |`pitch_max_pose`|   `1.0`  |  `1.0`  | The maximum pitch angle of the robot, in rad, range [-1.0,1.0] |             |    
 
 ## Quick Start
