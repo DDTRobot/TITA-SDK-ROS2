@@ -63,15 +63,16 @@ ros2 launch tita_bringup sdk_launch.py
 
 
 
-## 轨迹跟踪功能
+## 二、轨迹跟踪功能
 
 ## 构建包
+```bash
 mkdir -p tita_sdk/src
 cd tita_sdk/src
 git clone https://github.com/DDTRobot/TITA-SDK-ROS2.git
 colcon build
 source install/setup.bash
-
+```
 ### 轨迹录制 
 1. 启动轨迹录制节点
 ```bash
