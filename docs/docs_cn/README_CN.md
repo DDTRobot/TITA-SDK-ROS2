@@ -59,3 +59,38 @@ ros2 launch tita_bringup sdk_launch.py
 
 1. 如果ros2 launch tita_bringup sdk_launch.py退出后，机器人仍然会自动执行，除非释放use-sdk控制权限
 2. 如果出现机器人没有反应，sdk_command_node.cpp中angular.z值给太小了
+
+
+
+
+## 轨迹跟踪功能
+
+## 构建包
+mkdir -p tita_sdk/src
+cd tita_sdk/src
+git clone https://github.com/DDTRobot/TITA-SDK-ROS2.git
+colcon build
+source install/setup.bash
+
+### 轨迹录制 
+1. 启动轨迹录制节点
+```bash
+ros2 launch path_controller. path_controller.launch.py
+```
+2. 开始轨迹录制，即将遥控器控制机器人行走轨迹录制下来
+```bash
+ros2 service call /{namespace}/start_record_path std_srvs/srv/Trigger {}
+```
+3. 保存轨迹，即将遥控器控制机器人停止后，保存轨迹
+```bash 
+ ros2 service call /{namespace}/end_record_path std_srvs/srv/Trigger {}
+```
+4. 轨迹保存路径为/home/{username}/path2.pkl
+### 轨迹回放
+1. 启动轨迹跟踪节点
+```bash
+ros2 launch path_follower path_follower.launch.py
+```
+2. 确保主机与tita在一个网段，同一ROS_DOMAIN_ID（便于调整一些参数），如果有线连接也可以，确保在主机上能找到ros话题,使用Rviz2 可视化轨迹
+
+![path_follower](../img/path_follower.gif)
